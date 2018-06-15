@@ -1,0 +1,19 @@
+<h1>Soy una lista!!!</h1>
+{{#link-to 'login'}}
+Go to login :3
+{{/link-to}}
+<br>
+<br>
+<p>Tarea</p>
+
+<ul>
+	{{#each tasks as |task|}}
+		<li>
+			<p> Task: {{task.name}}</p>
+		</li>
+	{{/each}}
+</ul>
+
+
+<button{{action 'addTask' tas on='click'}}>Add task</button>
+{{input type="text" value=tas}}
